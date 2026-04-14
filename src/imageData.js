@@ -42,6 +42,7 @@ export const ultimateImages = buildPack('ultimate')
 
 // Curated subsets — keep render volume low and initial viewport fast
 export const heroImages = ultimateImages.slice(0, 8)
-export const previewStarterImages = starterImages.slice(0, 4)
+// Starter pack is small enough to show in full by default
+export const previewStarterImages = starterImages
 export const previewGrowthImages = growthImages.slice(0, 8)
 export const previewUltimateImages = ultimateImages.slice(0, 8)
