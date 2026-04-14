@@ -40,9 +40,9 @@ export const starterImages = buildPack('starter')
 export const growthImages = buildPack('growth')
 export const ultimateImages = buildPack('ultimate')
 
-// Curated subsets — keep render volume low and initial viewport fast
+// Curated subsets — lazy loading handles render cost past the viewport
 export const heroImages = ultimateImages.slice(0, 8)
-// Starter pack is small enough to show in full by default
+// Starter and Growth show the full pack; Ultimate is curated to keep the page tight
 export const previewStarterImages = starterImages
-export const previewGrowthImages = growthImages.slice(0, 8)
+export const previewGrowthImages = growthImages
 export const previewUltimateImages = ultimateImages.slice(0, 8)
