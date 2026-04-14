@@ -40,9 +40,10 @@ export const starterImages = buildPack('starter')
 export const growthImages = buildPack('growth')
 export const ultimateImages = buildPack('ultimate')
 
-// Curated subsets — lazy loading handles render cost past the viewport
+// Hero uses a small curated slice for initial-paint speed
 export const heroImages = ultimateImages.slice(0, 8)
-// Starter and Growth show the full pack; Ultimate is curated to keep the page tight
+// Every pack shows its full contents in the preview gallery — browser-native
+// lazy loading (loading="lazy" on each <img>) defers off-screen image bytes
 export const previewStarterImages = starterImages
 export const previewGrowthImages = growthImages
-export const previewUltimateImages = ultimateImages.slice(0, 8)
+export const previewUltimateImages = ultimateImages
